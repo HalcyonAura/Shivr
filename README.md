@@ -29,3 +29,7 @@ Career Week Todos
 # To Run This Project
 1. set up Conda environment using `req.txt`
 2. `flask run`
+
+Update jinja2 templates
+
+Delete test.html, index.html?

@@ -14,7 +14,8 @@ with open('schema.sql') as f:
 cur = connection.cursor()
 
 # Get sharks endpoint
-data = requests.get('https://www.mapotic.com/api/v1/maps/3413/pois.geojson/?h=20')
+data = requests.get(
+   'https://www.mapotic.com/api/v1/maps/3413/pois.geojson/?h=20')
 shark_data = json.loads(data.text)
 # Template data/test data retrieval
 #data = None
@@ -33,7 +34,7 @@ for shark in shark_data['features']:
 
   # meta data
   last_update = shark['properties']['last_update'] # use zping_datetime? but only if zping is true
-  species = shark['properties']['species'] #type
+  species = shark['properties']['species'] #type, maybe rewrite to species
   image = shark['properties']['image'] # profile img link
 
   # write to db, is there a better way to mass write this?
