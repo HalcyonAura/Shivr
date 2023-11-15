@@ -1,9 +1,13 @@
 DROP TABLE IF EXISTS sharks;
 
-CREATE TABLE sharks (
+    CREATE TABLE if not exists sharks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    sharkname TEXT NOT NULL,
-    followers INTEGER,
-    rating INTEGER
+    name TEXT NOT NULL,
+    age TEXT NOT NULL,
+    gender INTEGER,
+    weight INTEGER,
+    length INTEGER,
+    type TEXT,
+    image TEXT,
+    last_online TIMESTAMP CURRENT_TIMESTAMP
 );
