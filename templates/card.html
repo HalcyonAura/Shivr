@@ -2,13 +2,13 @@
 
 {% block content %}
     {% for shark in sharks%}
-        <h2>{{ shark['properties']['name'] }}</h2>
-        <h3>{{ shark['properties']['stage_of_life'] }}</h3>
-        <p><span>{{ shark['properties']['gender'] }}</span>
-            <span>{{ shark['properties']['type'] }}</span>
-            <img src="{{shark['properties']['image']}}" alt="image of {{ shark['properties']['name'] }}">
-            <span>{{ shark['properties']['length'] }}</span>
-            <span>{{ shark['properties']['weight'] }}</span>
+        <h2>{{ shark[2] }}</h2>
+        <h3>{{ shark[3] }}</h3>
+        <p><span>{{ shark[4] }}</span>
+            <span>{{ shark[7] }}</span>
+            <img src="{{shark[8]}}" alt="image of {{ shark[2] }}">
+            <span>{{ shark[6] }}</span>
+            <span>{{ shark[5] }}</span>
         </p>
     {% endfor %}
 {% endblock %}  
